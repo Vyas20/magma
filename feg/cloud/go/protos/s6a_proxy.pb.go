@@ -597,6 +597,7 @@ type UpdateLocationRequest struct {
 	SkipSubscriberData bool `protobuf:"varint,3,opt,name=skip_subscriber_data,json=skipSubscriberData,proto3" json:"skip_subscriber_data,omitempty"`
 	// Send Cancel Location to other EPCs serving the UE
 	InitialAttach        bool     `protobuf:"varint,4,opt,name=initial_attach,json=initialAttach,proto3" json:"initial_attach,omitempty"`
+	DualRegistration5gIndicator   bool `protobuf:"varint,5,opt,name=dual_regis_5g_ind,json=dualRegistration5gIndicator,proto3" json:"dual_regis_5g_ind,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -654,6 +655,14 @@ func (m *UpdateLocationRequest) GetInitialAttach() bool {
 	}
 	return false
 }
+
+func (m *UpdateLocationRequest) GetDualRegistration5gIndicator() bool {
+     if m != nil {
+      return m.DualRegistration5gIndicator
+     }
+       return false
+}
+
 
 // Update Location Answer (Section 7.2.4)
 type UpdateLocationAnswer struct {

@@ -95,6 +95,7 @@ func TestS6aProxyService(t *testing.T) {
 			VisitedPlmn:        []byte(test.TEST_PLMN_ID),
 			SkipSubscriberData: false,
 			InitialAttach:      true,
+			DualRegistration5gIndicator: true,
 		}
 		// ULR
 		ulResp, err := c.UpdateLocation(context.Background(), ulReq)

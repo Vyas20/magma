@@ -512,10 +512,15 @@ message UsageMonitoringUpdateResponse {
 message QosInformationRequest {
   uint32 apn_ambr_dl = 1;
   uint32 apn_ambr_ul = 2;
-  uint32 priority_level = 3;
-  uint32 preemption_capability = 4;
-  uint32 preemption_vulnerability = 5;
-  uint32 qos_class_id = 6;
+  enum BitrateUnitsAMBR {
+    BPS = 0;
+    KBPS = 1;
+    }
+  BitrateUnitsAMBR bitrate_units = 3;
+  uint32 priority_level = 4;
+  uint32 preemption_capability = 5;
+  uint32 preemption_vulnerability = 6;
+  uint32 qos_class_id = 7;
 }
 
 // TgppContext is a session specific 3GPP context session proxy may meed session manager to persist

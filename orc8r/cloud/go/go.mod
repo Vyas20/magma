@@ -37,7 +37,7 @@ require (
 	github.com/lib/pq v1.2.0
 	github.com/mattn/go-sqlite3 v1.11.0
 	github.com/olivere/elastic/v7 v7.0.6
-	github.com/pkg/errors v0.8.1
+	github.com/pkg/errors v0.9.1
 	github.com/prometheus/alertmanager v0.17.0
 	github.com/prometheus/client_golang v1.2.1
 	github.com/prometheus/client_model v0.2.0
